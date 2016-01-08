@@ -1,4 +1,13 @@
-<?php $footer_above_ad = extra_display_ad( 'footer_above', false ); ?>
+<?php
+/**
+ * @category            WordPress_Theme
+ * @package             Extra_Base_Theme
+ */
+
+$footer_above_ad = extra_display_ad( 'footer_above', false );
+
+?>
+
 <?php if ( ! empty( $footer_above_ad ) ) { ?>
 	<div class="container">
 		<div class="et_pb_extra_row etad footer_above">
