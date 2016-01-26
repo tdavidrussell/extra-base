@@ -27,13 +27,13 @@ remove_action( 'wp_head', 'wlwmanifest_link' );
 /**
  * Add custom style sheet to the HTML Editor
  **/
-function roexb_theme_add_editor_styles() {
+function ro_theme_add_editor_styles() {
 	if ( file_exists( get_stylesheet_directory() . "/editor-style.css" ) ) {
 		add_editor_style( 'editor-style.css' );
 	}
 }
 
-add_action( 'init', 'roexb_theme_add_editor_styles' );
+add_action( 'init', 'ro_theme_add_editor_styles' );
 
 
 /**
@@ -43,10 +43,10 @@ add_action( 'init', 'roexb_theme_add_editor_styles' );
  * Translations can be filed in the /languages/ directory.
  */
 /*
-function roexb_theme_setup() {
-	load_child_theme_textdomain( 'roexb-theme', get_stylesheet_directory() . '/languages' );
+function ro_theme_setup() {
+	load_child_theme_textdomain( 'ro-theme-textdomain', get_stylesheet_directory() . '/languages' );
 }
-add_action( 'after_setup_theme', 'rotwsbase_theme_setup' );
+add_action( 'after_setup_theme', 'ro_theme_setup' );
 */
 
 /**
@@ -54,16 +54,16 @@ add_action( 'after_setup_theme', 'rotwsbase_theme_setup' );
  *
  * @return void
  */
-function roexb_enqueue_custom_stylesheets() {
+function ro_enqueue_custom_stylesheets() {
 	if ( ! is_admin() ) {
 		if ( is_child_theme() ) {
 			if ( file_exists( get_stylesheet_directory() . "/custom.css" ) ) {
-				wp_enqueue_style( 'roexb-theme-custom-css', get_template_directory_uri() . '/custom.css' );
+				wp_enqueue_style( 'ro-theme-custom-css', get_template_directory_uri() . '/custom.css' );
 			}
 		}
 	}
 }
 
-//add_action( 'wp_enqueue_scripts', 'roexb_enqueue_custom_stylesheets', 11 );
+//add_action( 'wp_enqueue_scripts', 'ro_enqueue_custom_stylesheets', 11 );
 
 ?>
