@@ -26,8 +26,6 @@
 
 	<?php do_action( 'et_head_meta' ); ?>
 
-	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>"/>
-
 	<?php $template_directory_uri = get_template_directory_uri(); ?>
 	<!--[if lt IE 9]>
 	<script src="<?php echo esc_url( $template_directory_uri . '/scripts/ext/html5.js"' ); ?>" type="text/javascript"></script>

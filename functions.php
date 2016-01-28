@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'ROEXB_VERSION', '20160108.1' );
+define( 'ROEXB_VERSION', '20160128.1' );
 define( 'ROEXB_CDIR', get_stylesheet_directory() ); // if child, will be the file path, with out backslash
 define( 'ROEXB_CURI', get_stylesheet_uri() ); // URL, if child, will be the url to the theme directory, no back slash
 
@@ -34,6 +34,17 @@ function ro_theme_add_editor_styles() {
 }
 
 add_action( 'init', 'ro_theme_add_editor_styles' );
+
+/**
+ * enqueue parent theme css, instead doing @import
+ * Faster than @import
+ * @link https://kovshenin.com/2014/child-themes-import/
+ */
+function ro_enqueue_child_theme_css() {
+	wp_enqueue_style( 'ro-parent-css', get_template_directory_uri() . '/style.css' );
+}
+
+add_action( 'wp_enqueue_scripts', 'ro_enqueue_child_theme_css' );
 
 
 /**

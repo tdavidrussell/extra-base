@@ -1,5 +1,8 @@
 ## Changelog
 
+#### 20160128.1
+* Changed: enqueue parent theme css, instead doing @import
+
 #### 20160108.1
 * Updated: PHPDoc descriptions for files 
 

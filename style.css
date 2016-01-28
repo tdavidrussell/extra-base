@@ -13,7 +13,7 @@
  * Theme Name:          Extra Base
  * Theme URI:           http://www.timrussell.com/wordpress-themes/
  * Description:         Basic child theme. For Extra theme from <a href="http://www.elegantthemes.com/gallery/extra/">Elegant Themes</a>
- * Version:             20160108.1
+ * Version:             20160128.1
  * Author:              Tim Russell
  * Author URI:          http://timrussell.com/
  * License:             GPL-2.0+
@@ -52,7 +52,7 @@
  * GNU General Public License for more details.
  * **********************************************************************
 */
-@import url("../Extra/style.css");
+/* @import url("../Extra/style.css"); */
 
 /* =Child Theme customization starts here
 -------------------------------------------------------------- */
