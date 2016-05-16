@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'ROEXB_VERSION', '20160208.1' );
+define( 'ROEXB_VERSION', '20160516.1' );
 define( 'ROEXB_CDIR', get_stylesheet_directory() ); // if child, will be the file path, with out backslash
 define( 'ROEXB_CURI', get_stylesheet_uri() ); // URL, if child, will be the url to the theme directory, no back slash
 
@@ -52,7 +52,6 @@ function ro_enqueue_default_feed_link() {
 }
 
 add_action( 'wp_head', 'ro_enqueue_default_feed_link' );
-
 
 
 /**
@@ -124,6 +123,30 @@ function ro_enqueue_login_scripts() {
 		}
 	}
 }
+
 //add_action( 'login_enqueue_scripts', 'ro_enqueue_login_scripts' );
 
+/**
+ * The gallery module not recognise the image orientation.
+ * All images reduced to the fixed sizes and may be cropped.
+ * We can change those fixed sizes. Please add the following
+ * code to the functions.php :
+ *
+ *
+ * @link ET Forums: https://www.elegantthemes.com/forum/viewtopic.php?f=187&t=470086&p=2610589&hilit=image+sizes+gallery+image+cropped#p2610589
+ *
+ * @param $height
+ *
+ * @return string
+ */
+function ro_gallery_size_h( $height ) {
+	return '1280';
+}
+
+add_filter( 'et_pb_gallery_image_height', 'ro_gallery_size_h' );
+function ro_gallery_size_w( $width ) {
+	return '9999';
+}
+
+add_filter( 'et_pb_gallery_image_width', 'ro_gallery_size_w' );
 ?>

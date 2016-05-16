@@ -1,5 +1,9 @@
 ## Changelog
 
+#### 20160516.1
+* Added: gallery image size orientation
+* Change: code cleanup
+
 #### 20160208.1
 * Added: clean head tag area
 * Added: TinyMCE custom CSS
