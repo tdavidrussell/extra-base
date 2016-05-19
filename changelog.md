@@ -1,5 +1,9 @@
 ## Changelog
 
+#### 20160519.1
+* Added: editor-style.css
+* Updated: readme.md
+
 #### 20160516.1
 * Added: gallery image size orientation
 * Change: code cleanup
