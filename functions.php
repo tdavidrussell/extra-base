@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'ROEXB_VERSION', '20160519.1' );
+define( 'ROEXB_VERSION', '20160616.1' );
 define( 'ROEXB_CDIR', get_stylesheet_directory() ); // if child, will be the file path, with out backslash
 define( 'ROEXB_CURI', get_stylesheet_uri() ); // URL, if child, will be the url to the theme directory, no back slash
 
