@@ -1,6 +1,9 @@
 ## Changelog
 
 #### 20160519.1
+* code cleanup and testing
+
+#### 20160519.1
 * Added: editor-style.css
 * Updated: readme.md
 
