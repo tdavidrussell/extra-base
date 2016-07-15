@@ -1,5 +1,8 @@
 ## Changelog
 
+#### 20160715.1
+* Change: updated theme description
+
 #### 20160519.1
 * code cleanup and testing
 
