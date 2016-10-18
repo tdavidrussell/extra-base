@@ -1,5 +1,8 @@
 ## Changelog
 
+#### 20161018.1
+* Added: Added the SVG mime type.
+
 #### 20160715.1
 * Change: updated theme description
 

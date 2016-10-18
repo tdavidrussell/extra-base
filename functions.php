@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'ROEXB_VERSION', '20160715.1' );
+define( 'ROEXB_VERSION', '20161018.1' );
 define( 'ROEXB_CDIR', get_stylesheet_directory() ); // if child, will be the file path, with out backslash
 define( 'ROEXB_CURI', get_stylesheet_uri() ); // URL, if child, will be the url to the theme directory, no back slash
 
@@ -149,4 +149,10 @@ function ro_gallery_size_w( $width ) {
 }
 
 add_filter( 'et_pb_gallery_image_width', 'ro_gallery_size_w' );
+
+function rone_add_svg_mime_types($mimes) {
+	$mimes['svg'] = 'image/svg+xml';
+	return $mimes;
+}
+add_filter('upload_mimes', 'rone_add_svg_mime_types');
 ?>
