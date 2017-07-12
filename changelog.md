@@ -1,6 +1,10 @@
 ## Changelog
 
 #### 20170425.1
+Tested: 4.8
+Added: social icons open in new tab
+
+#### 20170425.1
 * Change: updated theme description
 
 #### 20161018.1
