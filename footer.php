@@ -22,9 +22,12 @@ $footer_above_ad = extra_display_ad( 'footer_above', false );
 		<div class="container">
 
 			<!-- Footer Info -->
+<!--
 			<p id="footer-info"><?php printf( __( 'Designed by %1$s | Powered by %2$s', 'extra' ), '<a href="http://www.elegantthemes.com" title="Premium WordPress Themes">Elegant Themes</a>', '<a href="http://www.wordpress.org">WordPress</a>' ); ?></p>
+-->
+            <p id="footer-info">Copyright &copy <?php echo date( "Y" ) ?> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 
-			<!-- Footer Navigation -->
+            <!-- Footer Navigation -->
 			<?php if ( has_nav_menu( 'footer-menu' ) || false !== et_get_option( 'show_footer_social_icons', true ) ) { ?>
 				<div id="footer-nav">
 					<?php
