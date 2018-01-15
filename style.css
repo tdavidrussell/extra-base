@@ -12,7 +12,7 @@
  * Theme Name:          Extra Base
  * Theme URI:           http://timrussell.com/wordpress/
  * Description:         Basic child theme. For Extra theme from <a href="http://www.elegantthemes.com/gallery/extra/">Elegant Themes</a>
- * Version:             20180115.1
+ * Version:             20180115.2
  * Author:              Tim Russell
  * Author URI:          https://timrussell.com/
  * License:             GPL-2.0+
@@ -55,9 +55,9 @@
 
 /* =Child Theme customization starts here
 -------------------------------------------------------------- */
-@import url('/css/tribe-events.css');
-@import url('/css/contact-form7.css');
-@import url('/css/loginwidget-ap.css');
+@import url('css/tribe-events.css');
+@import url('css/contact-form7.css');
+@import url('css/loginwidget-ap.css');
 
 
 

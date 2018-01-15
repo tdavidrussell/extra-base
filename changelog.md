@@ -1,5 +1,8 @@
 ## Changelog
 
+#### 20180115.2
+Fixed: loading of stylesheets
+
 #### 20180115.1
 Changed: reorganized css and function files
 
