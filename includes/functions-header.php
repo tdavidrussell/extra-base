@@ -99,4 +99,27 @@ function ro_enqueue_login_scripts() {
 //add_action( 'login_enqueue_scripts', 'ro_enqueue_login_scripts' );
 
 
+/**
+ * EXAMPLE:
+ * Add google fonts, don't forget to add the to the style.css or custom.css file.
+ */
+function ro_add_google_fonts() {
+	wp_register_style( 'ro-googleFonts', 'http://fonts.googleapis.com/css?family=Lato' );
+	wp_enqueue_style( 'ro-googleFonts' );
+}
+
+//add_action( 'wp_print_styles', 'ro_add_google_fonts' );
+
+/**
+ * Register and load font awesome CSS files using a CDN.
+ *
+ * @link   http://www.bootstrapcdn.com/#fontawesome
+ * @author FAT Media
+ */
+function ro_enqueue_awesome() {
+	wp_enqueue_style( 'ro-font-awesome', 'http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css', array(), '4.0.3' );
+}
+
+//add_action( 'wp_enqueue_scripts', 'ro_enqueue_awesome' );
+
 ?>
