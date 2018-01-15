@@ -5,16 +5,16 @@
  * @author              Tim Russell <githubber@timrussell.com>
  * @license             GPL-2.0+
  * @link                http://timrussell.com
- * @copyright           Copyright: (c) 2014-2016
+ * @copyright           Copyright: (c) 2016-2018
  *
  * @wordpress-theme
  *
  * Theme Name:          Extra Base
- * Theme URI:           http://timrussell.com/wordpress-themes/
+ * Theme URI:           http://timrussell.com/wordpress/
  * Description:         Basic child theme. For Extra theme from <a href="http://www.elegantthemes.com/gallery/extra/">Elegant Themes</a>
- * Version:             20170712.1
+ * Version:             20180115.1
  * Author:              Tim Russell
- * Author URI:          http://timrussell.com/
+ * Author URI:          https://timrussell.com/
  * License:             GPL-2.0+
  * License URI:         http://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:         extra-base
@@ -27,11 +27,11 @@
  *
  * Template:            Extra
  *
- * Requires WP:         4.6
+ * Requires WP:         4.8
  * Requires PHP:        5.3
  *
- * Support URI:         http://timrussell.com/wordpress/
- * Documentation URI:   http://timrussell.com/wordpress/
+ * Support URI:         https://timrussell.com/wordpress/
+ * Documentation URI:   https://timrussell.com/wordpress/
  *
  * Released under the GPL license
  * http://www.opensource.org/licenses/gpl-license.php
@@ -55,4 +55,22 @@
 
 /* =Child Theme customization starts here
 -------------------------------------------------------------- */
+@import url('/css/tribe-events.css');
+@import url('/css/contact-form7.css');
+@import url('/css/loginwidget-ap.css');
+
+
+
+/** start block -> stop forcing width of featured images **/
+.post-thumbnail img {
+    display: block;
+    width: auto;
+    margin: auto;
+}
+img {
+    display: block;
+    width: auto;
+    margin: auto;
+}
+/** stop block -> stop forcing width of featured images **/
 
