@@ -552,10 +552,10 @@ function extra_child_theme_blog_setup() {
 										// page builder doesn't support more tag, so display the_content() in case of post made with page builder
 										if ( et_pb_is_pagebuilder_used( get_the_ID() ) ) {
 											$more = 1;
-											//the_content();
+											the_content();
 										} else {
 											$more = null;
-											//the_content( esc_html__( 'read more...', 'et_builder' ) );
+											the_content( esc_html__( 'read more...', 'et_builder' ) );
 										}
 									} else {
 										if ( has_excerpt() ) {
@@ -565,7 +565,7 @@ function extra_child_theme_blog_setup() {
 										}
 									}
 								} else if ( has_excerpt() ) {
-									//the_excerpt();
+									the_excerpt();
 								}
 
 								if ( 'on' !== $show_content ) {

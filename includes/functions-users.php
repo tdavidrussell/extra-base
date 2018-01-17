@@ -35,7 +35,7 @@ function rone_logged_in_time( $expirein ) {
 /* Change the Posts menu item to Blogs
  *
  */
-function edit_admin_menus() {
+function rone_edit_post_menus() {
 	global $menu;
 	global $submenu;
 
@@ -46,7 +46,7 @@ function edit_admin_menus() {
 	$submenu['edit.php'][16][0] = 'Blog Tags';
 }
 
-//add_action( 'admin_menu', 'edit_admin_menus' );
+//add_action( 'admin_menu', 'rone_edit_post_menus' );
 
 
 

@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * So lets clean out some of them
  *
  */
-function ro_removeHeadLinks() {
+function rone_removeHeadLinks() {
 	/** remove some header information  **/
 	remove_action( 'wp_head', 'feed_links_extra', 3 );  //category feeds
 	remove_action( 'wp_head', 'feed_links', 2 );        //post and comments feed, see ro_enqueue_default_feed_link()
@@ -22,7 +22,7 @@ function ro_removeHeadLinks() {
 	remove_action( 'wp_head', 'wp_shortlink_wp_head' );  //short links like ?p=124
 }
 
-add_action( 'init', 'ro_removeHeadLinks' );
+add_action( 'init', 'rone_removeHeadLinks' );
 
 
 /**
@@ -33,41 +33,41 @@ add_action( 'init', 'ro_removeHeadLinks' );
  *
  * @see ro_remove_head_links()
  */
-function ro_enqueue_default_feed_link() {
+function rone_enqueue_default_feed_link() {
 	echo "<link rel='alternate' type='application/rss+xml' title='" . get_bloginfo( 'name' ) . " &raquo; Feed' href='" . get_feed_link() . "' />";
 }
 
-add_action( 'wp_head', 'ro_enqueue_default_feed_link' );
+add_action( 'wp_head', 'rone_enqueue_default_feed_link' );
 
 
 /**
  * Add custom style sheet to the HTML Editor
  **/
-function ro_theme_add_editor_styles() {
+function rone_theme_add_editor_styles() {
 	if ( file_exists( get_stylesheet_directory() . "/editor-style.css" ) ) {
 		add_editor_style( 'editor-style.css' );
 	}
 }
 
-add_action( 'init', 'ro_theme_add_editor_styles' );
+add_action( 'init', 'rone_theme_add_editor_styles' );
 
 /**
  * enqueue parent theme css, instead doing @import
  * Faster than @import
  * @link https://kovshenin.com/2014/child-themes-import/
  */
-function ro_enqueue_child_theme_css() {
+function rone_enqueue_child_theme_css() {
 	wp_enqueue_style( 'ro-parent-css', get_template_directory_uri() . '/style.css' );
 }
 
-add_action( 'wp_enqueue_scripts', 'ro_enqueue_child_theme_css' );
+add_action( 'wp_enqueue_scripts', 'rone_enqueue_child_theme_css' );
 
 /**
  * Load a custom.css style sheet, if it exists in a child theme.
  *
  * @return void
  */
-function ro_enqueue_custom_stylesheets() {
+function rone_enqueue_custom_stylesheets() {
 	if ( ! is_admin() ) {
 		if ( is_child_theme() ) {
 			if ( file_exists( get_stylesheet_directory() . "/custom.css" ) ) {
@@ -77,7 +77,7 @@ function ro_enqueue_custom_stylesheets() {
 	}
 }
 
-//add_action( 'wp_enqueue_scripts', 'ro_enqueue_custom_stylesheets', 11 );
+//add_action( 'wp_enqueue_scripts', 'rone_enqueue_custom_stylesheets', 11 );
 
 
 /**
@@ -85,7 +85,7 @@ function ro_enqueue_custom_stylesheets() {
  * @link https://codex.wordpress.org/Customizing_the_Login_Form
  *
  */
-function ro_enqueue_login_scripts() {
+function rone_enqueue_login_scripts() {
 	if ( is_child_theme() ) {
 		if ( file_exists( get_stylesheet_directory() . "/css/custom-login.css" ) ) {
 			wp_enqueue_style( 'ro-custom-login-css', get_stylesheet_directory_uri() . '/css/custom-login.css' );
@@ -96,19 +96,19 @@ function ro_enqueue_login_scripts() {
 	}
 }
 
-//add_action( 'login_enqueue_scripts', 'ro_enqueue_login_scripts' );
+//add_action( 'login_enqueue_scripts', 'rone_enqueue_login_scripts' );
 
 
 /**
  * EXAMPLE:
  * Add google fonts, don't forget to add the to the style.css or custom.css file.
  */
-function ro_add_google_fonts() {
+function rone_add_google_fonts() {
 	wp_register_style( 'ro-googleFonts', 'http://fonts.googleapis.com/css?family=Lato' );
 	wp_enqueue_style( 'ro-googleFonts' );
 }
 
-//add_action( 'wp_print_styles', 'ro_add_google_fonts' );
+//add_action( 'wp_print_styles', 'rone_add_google_fonts' );
 
 /**
  * Register and load font awesome CSS files using a CDN.
@@ -116,10 +116,10 @@ function ro_add_google_fonts() {
  * @link   http://www.bootstrapcdn.com/#fontawesome
  * @author FAT Media
  */
-function ro_enqueue_awesome() {
+function rone_enqueue_awesome() {
 	wp_enqueue_style( 'ro-font-awesome', 'http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css', array(), '4.0.3' );
 }
 
-//add_action( 'wp_enqueue_scripts', 'ro_enqueue_awesome' );
+//add_action( 'wp_enqueue_scripts', 'rone_enqueue_awesome' );
 
 ?>
