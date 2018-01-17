@@ -7,14 +7,6 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Raging One functions
  */
 
-
-add_action( 'admin_bar_menu', 'ro_remove_wp_logo', 9999 );
-function ro_remove_wp_logo( $wp_admin_bar ) {
-	$wp_admin_bar->remove_node( 'wp-logo' );
-	//$wp_admin_bar->remove_node( 'et-use-visual-builder' );
-}
-
-
 /*
  * Will add et page builder to RO Resources custom post type
  * @link: https://www.elegantthemes.com/blog/divi-resources/how-to-add-the-divi-builder-to-custom-post-types-divi-nation-short
@@ -31,13 +23,13 @@ function ro_remove_wp_logo( $wp_admin_bar ) {
  *
 */
 
-function ro_custom_post_types_addto_et_builder( $post_types ) {
+function rone_custom_post_types_addto_et_builder( $post_types ) {
 	$post_types[] = 'resources';
 	//$post_types[] = 'ANOTHER_CPT_HERE';
 
 	return $post_types;
 }
-add_filter( 'et_builder_post_types', 'ro_custom_post_types_addto_et_builder' );
+add_filter( 'et_builder_post_types', 'rone_custom_post_types_addto_et_builder' );
 
 
 

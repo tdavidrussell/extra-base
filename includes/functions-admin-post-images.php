@@ -19,9 +19,9 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @link https://github.com/robincornett/add-featured-image-column
  * @link https://robincornett.com/featured-image-column/
  */
-add_filter( 'manage_posts_columns', 'ro_posts_columns', 5 );
-add_action( 'manage_posts_custom_column', 'ro_posts_custom_columns', 5, 2 );
-function ro_posts_columns( $columns ) {
+add_filter( 'manage_posts_columns', 'rone_posts_columns', 5 );
+add_action( 'manage_posts_custom_column', 'rone_posts_custom_columns', 5, 2 );
+function rone_posts_columns( $columns ) {
 	$new_columns = $columns;
 	array_splice( $new_columns, 1 );
 	$new_columns['featured_image'] = __( 'Featured Image', 'add-featured-image-column' );
@@ -29,7 +29,7 @@ function ro_posts_columns( $columns ) {
 	return array_merge( $new_columns, $columns );
 }
 
-function ro_posts_custom_columns( $column_name, $id ) {
+function rone_posts_custom_columns( $column_name, $id ) {
 
 	if ( $column_name === 'featured_image' ) {
 		if ( has_post_thumbnail() ) {
@@ -44,12 +44,12 @@ function ro_posts_custom_columns( $column_name, $id ) {
 }
 
 
-add_action( 'admin_enqueue_scripts', 'ro_featured_image_column_width' );
+add_action( 'admin_enqueue_scripts', 'rone_featured_image_column_width' );
 /**
  * Creates an inline stylesheet to set featured image column width
  */
 
-function ro_featured_image_column_width() {
+function rone_featured_image_column_width() {
 	$screen = get_current_screen();
 	if ( ! post_type_supports( $screen->post_type, 'thumbnail' ) ) {
 		return;

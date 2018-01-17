@@ -1,5 +1,8 @@
 ## Changelog
 
+#### 20180117.2
+Fixed: functions.php code typo
+
 #### 20180115.2
 Fixed: loading of stylesheets
 
