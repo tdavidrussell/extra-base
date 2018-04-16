@@ -49,6 +49,4 @@ function rone_edit_post_menus() {
 //add_action( 'admin_menu', 'rone_edit_post_menus' );
 
 
-
-
 ?>

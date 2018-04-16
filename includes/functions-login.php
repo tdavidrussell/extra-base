@@ -6,8 +6,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 
-
-
 /**
  * adds login/logout to the primary menu if defined
  *
