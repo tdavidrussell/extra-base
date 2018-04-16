@@ -25,12 +25,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 function rone_custom_post_types_addto_et_builder( $post_types ) {
 	$post_types[] = 'resources';
+
 	//$post_types[] = 'ANOTHER_CPT_HERE';
 
 	return $post_types;
 }
-add_filter( 'et_builder_post_types', 'rone_custom_post_types_addto_et_builder' );
 
+add_filter( 'et_builder_post_types', 'rone_custom_post_types_addto_et_builder' );
 
 
 /**
@@ -40,25 +41,26 @@ if ( ! function_exists( 'et_pb_resources_meta_box' ) ) :
 	function et_pb_resources_meta_box() {
 		global $post;
 
-		$cpt_post_cf = get_post_custom_values("rone_resource_link_url");
+		$cpt_post_cf = get_post_custom_values( "rone_resource_link_url" );
 		?>
 
-		<div class="et_project_meta">
+        <div class="et_project_meta">
 
-			<span class="published"><?php echo esc_html__( 'Posted on', 'Divi' ); ?> <?php echo get_the_date(); ?> </span> |
+            <span class="published"><?php echo esc_html__( 'Posted on', 'Divi' ); ?><?php echo get_the_date(); ?> </span> |
 
 			<?php echo get_the_term_list( get_the_ID(), 'resource-categories', '', ', ' ); ?>
-			<!--
-			<span class="published"><?php echo esc_html__( 'Visit', 'Divi' ); ?>: <a href="<?php echo get_metadata("post",$post->ID,"rone_resource_link_url",true);?>" target="_blank" > <?php echo $post->ID; the_title();?></a></span>
+            <!--
+			<span class="published"><?php echo esc_html__( 'Visit', 'Divi' ); ?>: <a href="<?php echo get_metadata( "post", $post->ID, "rone_resource_link_url", true ); ?>" target="_blank" > <?php echo $post->ID;
+			the_title(); ?></a></span>
 			-->
-			<p>
+            <p>
 				<span class="published">
-					<?php echo esc_html__( 'Visit', 'Divi' ); ?>: <a href="<?php echo $cpt_post_cf[0]?>" target="_blank" > <?php the_title();?></a>
+					<?php echo esc_html__( 'Visit', 'Divi' ); ?>: <a href="<?php echo $cpt_post_cf[0] ?>" target="_blank"> <?php the_title(); ?></a>
 				</span>
-			</p>
+            </p>
 
 
-		</div>
+        </div>
 	<?php }
 endif;
 

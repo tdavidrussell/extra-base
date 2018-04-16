@@ -4,15 +4,15 @@
  * @package             Extra_Base_Theme
  * @author              Tim Russell <githubber@timrussell.com>
  * @license             GPL-2.0+
- * @link                http://timrussell.com
+ * @link                https://timrussell.com
  * @copyright           Copyright: (c) 2016-2018
  *
  * @wordpress-theme
  *
  * Theme Name:          Extra Base
- * Theme URI:           http://timrussell.com/wordpress/
+ * Theme URI:           https://timrussell.com/wordpress/
  * Description:         Basic child theme. For Extra theme from <a href="http://www.elegantthemes.com/gallery/extra/">Elegant Themes</a>
- * Version:             20180117.1
+ * Version:             20180416.1
  * Author:              Tim Russell
  * Author URI:          https://timrussell.com/
  * License:             GPL-2.0+
@@ -74,3 +74,28 @@ img {
 }
 /** stop block -> stop forcing width of featured images **/
 
+
+#footer {
+    color: #f8f8f8;
+}
+/** fixed footer bottom **/
+#footer-bottom {
+    background-color: #232323;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    /** text-align: center; */
+    z-index: 9;
+}
+p#footer-info {
+    width: 100%;
+    /*text-align: center;*/
+}
+/* footer widget text, ie category count was black on black */
+#footer ul li{
+    color: #f8f8f8 !important;
+}
+/** change the hover color on footer links **/
+#footer-info a:hover{
+    color: #f8f8f8;
+}

@@ -1,5 +1,12 @@
 ## Changelog
 
+#### 20180416.1
+* Tested with 4.9
+
+#### 20180123.1
+Changed: footer copyright format
+Added: css to remove the excerpt content and readmore button
+
 #### 20180117.2
 Fixed: functions.php code typo
 

@@ -5,8 +5,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 
-
-
 /**
  * Add the feature image to the post admin page.
  *
@@ -55,31 +53,31 @@ function rone_featured_image_column_width() {
 		return;
 	}
 	if ( in_array( $screen->base, array( 'edit' ), true ) ) { ?>
-		<style type="text/css">
+        <style type="text/css">
 
-			.column-featured_image {
-				width: 200px;
-			}
+            .column-featured_image {
+                width: 200px;
+            }
 
-			.column-featured_image img {
-				margin: 0 auto;
-				height: auto;
-				width: auto;
-				max-width: 200px;
-			}
+            .column-featured_image img {
+                margin: 0 auto;
+                height: auto;
+                width: auto;
+                max-width: 200px;
+            }
 
-			@media screen and (max-width: 782px) {
-				.column-featured_image {
-					display: table-cell !important;
-					width: 52px;
-				}
+            @media screen and (max-width: 782px) {
+                .column-featured_image {
+                    display: table-cell !important;
+                    width: 52px;
+                }
 
-				.column-featured_image img {
-					margin: 0;
-					max-width: 42px;
-				}
-			}
-		</style> <?php
+                .column-featured_image img {
+                    margin: 0;
+                    max-width: 42px;
+                }
+            }
+        </style> <?php
 	}
 
 }
