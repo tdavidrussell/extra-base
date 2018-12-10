@@ -10,9 +10,9 @@
  * @wordpress-theme
  *
  * Theme Name:          Extra Base
- * Theme URI:           https://timrussell.com/wordpress/
+ * Theme URI:           https://gitlab.com/tdavidrussell/extra-base
  * Description:         Basic child theme. For Extra theme from <a href="http://www.elegantthemes.com/gallery/extra/">Elegant Themes</a>
- * Version:             20180416.1
+ * Version:             20181209.1
  * Author:              Tim Russell
  * Author URI:          https://timrussell.com/
  * License:             GPL-2.0+
@@ -20,18 +20,18 @@
  * Text Domain:         extra-base
  * Domain Path:         /languages
  *
- * GitHub Theme URI:    https://github.com/tdavidrussell/extra-base
- * GitHub Branch:       master
+ * Gitlab Theme URI:    https://gitlab.com/tdavidrussell/extra-base
+ * Gitlab Branch:       master
  *
  * Tags: child-theme, Extra Theme, black, green, white, light, dark, two-columns, three-columns, left-sidebar, right-sidebar, fixed-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready, accessibility-ready
  *
  * Template:            Extra
  *
  * Requires WP:         4.8
- * Requires PHP:        5.3
+ * Requires PHP:        5.6
  *
- * Support URI:         https://timrussell.com/wordpress/
- * Documentation URI:   https://timrussell.com/wordpress/
+ * Support URI:         https://gitlab.com/tdavidrussell/extra-base/
+ * Documentation URI:   https://gitlab.com/tdavidrussell/extra-base
  *
  * Released under the GPL license
  * http://www.opensource.org/licenses/gpl-license.php
@@ -74,6 +74,9 @@ img {
 }
 /** stop block -> stop forcing width of featured images **/
 
+ul.pagination{
+    margin-bottom: 2em;
+}
 
 #footer {
     color: #f8f8f8;

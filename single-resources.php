@@ -45,6 +45,7 @@
                                         <h1 class="entry-title"><?php the_title(); ?></h1>
                                         <div class="post-meta">
                                             <p><?php echo extra_display_single_post_meta(); ?></p>
+                                            <p><?php echo get_the_term_list(get_the_ID(), 'resource-categories', '', ', ', ''); ?></p>
                                         </div>
                                     </div>
 								<?php } ?>

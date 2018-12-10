@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Site User functions
  */
-/** Removes the WordPress logo on ther user side. */
+/** Removes the WordPress logo on the user side. */
 add_action( 'admin_bar_menu', 'rone_remove_wp_logo', 9999 );
 
 function rone_remove_wp_logo( $wp_admin_bar ) {
@@ -21,8 +21,8 @@ function rone_logged_in_time( $expirein ) {
 
 	if ( current_user_can( 'editor' ) || current_user_can( 'administrator' ) ) {
 		// stuff here for admins or editors
-		return 31556926; // 1 year in seconds
-		//return 604800; // 1 week in seconds
+		//return 31556926; // 1 year in seconds
+		return 604800; // 1 week in seconds
 	} else {
 		return $expirein;
 	}
@@ -40,7 +40,7 @@ function rone_edit_post_menus() {
 	global $submenu;
 
 	$menu[5][0]                 = 'Blog'; // Change Posts to Blog
-	$submenu['edit.php'][5][0]  = 'All Blogs Post';
+	$submenu['edit.php'][5][0]  = 'All Blog Posts';
 	$submenu['edit.php'][10][0] = 'Add a Blog Post';
 	$submenu['edit.php'][15][0] = 'Blog Category';
 	$submenu['edit.php'][16][0] = 'Blog Tags';
