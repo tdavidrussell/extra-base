@@ -2,10 +2,10 @@
 
 __Contributors:__ 
 
-* Tim Russell [Web](http://timrussell.com) / [GitHub](https://github.com/tdavidrussell) / [Bitbucket](https://bitbucket.com/tdavidrussell)    
+* Tim Russell [Web](http://timrussell.com) / [GitHub](https://github.com/tdavidrussell) / [GitLab](https://gitlab.com/tdavidrussell)    
 
 __Requires:__ 4.8  
-__Tested up to:__ 4.9  
+__Tested up to:__ 5.0  
 __License:__ [GPL-2.0+](http://www.gnu.org/licenses/gpl-2.0.html)   
 __[Project Page](https://gitlab.com/tdavidrussell/extra-base)__   
 
